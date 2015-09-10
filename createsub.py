@@ -1,0 +1,80 @@
+#!/usr/bin/env python
+#coding=utf-8
+import rrdtool
+ 
+def Item01(rrdname, startStamp, DS):
+    rrdtool.create(rrdname, '--step', '60', '--start', startStamp, DS[0],
+                   'RRA:AVERAGE:0.5:1:3000',
+                   'RRA:AVERAGE:0.5:5:4200',
+                   'RRA:AVERAGE:0.5:24:3800',
+                   'RRA:AVERAGE:0.5:240:4400',
+                   'RRA:MAX:0.5:1:3000',
+                   'RRA:MAX:0.5:5:4200',
+                   'RRA:MAX:0.5:24:3800',
+                   'RRA:MAX:0.5:240:4400',
+                   'RRA:MIN:0.5:1:3000',
+                   'RRA:MIN:0.5:5:4200',
+                   'RRA:MIN:0.5:24:3800',
+                   'RRA:MIN:0.5:240:4400')
+def Item02(rrdname, startStamp, DS):
+    rrdtool.create(rrdname, '--step', '60', '--start', startStamp, DS[0], 
+    DS[1],
+                   'RRA:AVERAGE:0.5:1:3000',
+                   'RRA:AVERAGE:0.5:5:4200',
+                   'RRA:AVERAGE:0.5:24:3800',
+                   'RRA:AVERAGE:0.5:240:4400',
+                   'RRA:MAX:0.5:1:3000',
+                   'RRA:MAX:0.5:5:4200',
+                   'RRA:MAX:0.5:24:3800',
+                   'RRA:MAX:0.5:240:4400',
+                   'RRA:MIN:0.5:1:3000',
+                   'RRA:MIN:0.5:5:4200',
+                   'RRA:MIN:0.5:24:3800',
+                   'RRA:MIN:0.5:240:4400')
+def Item03(rrdname, startStamp, DS):
+    rrdtool.create(rrdname, '--step', '60', '--start', startStamp, DS[0], 
+    DS[1], DS[2],
+                   'RRA:AVERAGE:0.5:1:3000',
+                   'RRA:AVERAGE:0.5:5:4200',
+                   'RRA:AVERAGE:0.5:24:3800',
+                   'RRA:AVERAGE:0.5:240:4400',
+                   'RRA:MAX:0.5:1:3000',
+                   'RRA:MAX:0.5:5:4200',
+                   'RRA:MAX:0.5:24:3800',
+                   'RRA:MAX:0.5:240:4400',
+                   'RRA:MIN:0.5:1:3000',
+                   'RRA:MIN:0.5:5:4200',
+                   'RRA:MIN:0.5:24:3800',
+                   'RRA:MIN:0.5:240:4400')
+def Item04(rrdname, startStamp, DS):
+    rrdtool.create(rrdname, '--step', '60', '--start', startStamp, DS[0], 
+    DS[1], DS[2], DS[3],
+                   'RRA:AVERAGE:0.5:1:3000',
+                   'RRA:AVERAGE:0.5:5:4200',
+                   'RRA:AVERAGE:0.5:24:3800',
+                   'RRA:AVERAGE:0.5:240:4400',
+                   'RRA:MAX:0.5:1:3000',
+                   'RRA:MAX:0.5:5:4200',
+                   'RRA:MAX:0.5:24:3800',
+                   'RRA:MAX:0.5:240:4400',
+                   'RRA:MIN:0.5:1:3000',
+                   'RRA:MIN:0.5:5:4200',
+                   'RRA:MIN:0.5:24:3800',
+                   'RRA:MIN:0.5:240:4400')
+#def test(rrdname, startStamp, DS):
+#    #test1=rrdtool.create(rrdname, '--step', '60', '--start', startStamp,
+#    print (rrdname, '--step', '60', '--start', startStamp,
+#                   str(DS[0]), str(DS[1]), str(DS[2]), str(DS[3]),
+#                   'RRA:AVERAGE:0.5:1:3000',
+#                   'RRA:AVERAGE:0.5:5:4200',
+#                   'RRA:AVERAGE:0.5:24:3800',
+#                   'RRA:AVERAGE:0.5:240:4400',
+#                   'RRA:MAX:0.5:1:3000',
+#                   'RRA:MAX:0.5:5:4200',
+#                   'RRA:MAX:0.5:24:3800',
+#                   'RRA:MAX:0.5:240:4400',
+#                   'RRA:MIN:0.5:1:3000',
+#                   'RRA:MIN:0.5:5:4200',
+#                   'RRA:MIN:0.5:24:3800',
+#                   'RRA:MIN:0.5:240:4400')
+#    #print test1
